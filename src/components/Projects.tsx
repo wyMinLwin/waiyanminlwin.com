@@ -4,14 +4,27 @@ import Image from "next/image";
 
 const projects = [
 	{
-		name: "Frontend Makro",
+		name: "Scaffa",
 		description:
-			"Frontend Makro is a collection of pre-setup frontend templates for various frontend frameworks. It is designed to provide a quick start for frontend developers to start their projects without worrying about the setup process. This is neither a UI library nor a component library. It is a collection of pre-setup templates.",
+			"Scaffa is a collection of pre-setup frontend templates for various frontend frameworks. It is designed to provide a quick start for frontend developers to start their projects without worrying about the setup process. This is neither a UI library nor a component library. It is a collection of pre-setup templates.",
 		tag: ["NPX", "SvelteKit", "TailwindCSS", "TypeScript"],
-		url: "https://frontend-makro.vercel.app/",
-		github: "frontend-makro",
+		url: "https://scaffa.vercel.app/",
+		github: "scaffa",
 	},
-
+    {
+        name: "to-xlsx",
+        description: "Export to excel with a function",
+        tag: ["TypeScript" , "Excel"],
+        url: "https://github.com/wyMinLwin/to-xlsx",
+        github: "to-xlsx"
+    },
+    {
+        name: "runtime-save",
+        description: "A JavaScript library to save files with runtime-awareness.",
+        tag: ["TypeScript", "NodeJS"],
+        url: "https://github.com/wyMinLwin/runtime-save",
+        github: "runtime-save",
+    },
 	{
 		name: "Carbon Kinn Sin",
 		description:
