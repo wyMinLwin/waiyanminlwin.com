@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import StarIcon from "@/assets/icons/star.svg";
 
 const GithubStar = ({ repo }: { repo: string }) => {
 	const [stars, setStars] = useState<number>(0);
@@ -36,7 +37,7 @@ const GithubStar = ({ repo }: { repo: string }) => {
 			className="px-2 mt-1 flex justify-center items-center space-x-1 hover:text-primary"
 		>
 			{isLoading ? "-" : <span className="text-lg">{stars}</span>}
-			<Image priority src={"./star.svg"} alt="star image" width={20} height={20} />
+			<Image priority src={StarIcon} alt="star image" width={20} height={20} />
 		</button>
 	);
 };

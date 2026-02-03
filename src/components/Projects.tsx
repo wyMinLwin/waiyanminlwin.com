@@ -1,6 +1,7 @@
 import React from "react";
 import GithubStar from "./GithubStar";
 import Image from "next/image";
+import ExternalLinkIcon from "@/assets/icons/external-link.svg";
 
 const projects = [
 	{
