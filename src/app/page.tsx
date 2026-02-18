@@ -1,6 +1,7 @@
 "use client";
 import About from "@/components/About";
 import Navbar from "@/components/Navbar";
+import Contributions from "@/components/Contributions";
 import Projects from "@/components/Projects";
 import WorkExperiences from "@/components/WorkExperiences";
 import {} from "next/navigation";
@@ -85,7 +86,7 @@ export default function Home() {
                 </InView>
 
                 <InView
-                    threshold={threshold}
+                    threshold={0.15}
                     as={"section"}
                     id="projects"
                     className="space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16"
@@ -96,6 +97,20 @@ export default function Home() {
                     }}
                 >
                     <Projects />
+                </InView>
+
+                <InView
+                    threshold={threshold}
+                    as={"section"}
+                    id="contributions"
+                    className="space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16"
+                    onChange={(inView) => {
+                        if (inView) {
+                            setCurrentPath("contributions");
+                        }
+                    }}
+                >
+                    <Contributions />
                 </InView>
             </div>
         </>

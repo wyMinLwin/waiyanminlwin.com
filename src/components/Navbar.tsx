@@ -19,21 +19,24 @@ const links = [
         icon: "./terminal.svg",
         alt: "project",
     },
+    {
+        url: "contributions",
+        icon: "./git-merge.svg",
+        alt: "contributions",
+    },
 ];
 
 const Navbar = ({ currentPath }: { currentPath: string }) => {
-    const top = useMemo(() => {
-        switch (currentPath) {
-            case "about":
-                return 'top-1/4 -translate-y-3/4';
-            case "experiences":
-                return 'top-1/2 -translate-y-1/2';
-            case "projects":
-                return 'top-1/2 translate-y-full';
-            default:
-                return '';
-        }
+    const activeIndex = useMemo(() => {
+        return links.findIndex((link) => link.url === currentPath);
     }, [currentPath]);
+
+    // Each link: p-2 (8px) + 20px icon + p-2 (8px) = 36px
+    // Gap between links: gap-3 = 12px
+    // Container top padding: py-3 = 12px
+    // Center of nth item: 12 + n * (36 + 12) + 18 = 30 + n * 48
+    // Indicator is w-8 h-8 (32px), so offset to center: -16px
+    const indicatorTop = activeIndex >= 0 ? 30 + activeIndex * 48 - 16 : 0;
     return (
         <nav
             className="hidden sm:block fixed top-1/2 -translate-y-1/2 m-0 left-5 z-20"
@@ -55,7 +58,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
                         />
                     </Link>
                 ))}
-                <div className={`absolute  z-10 w-8 h-8 bg-primary/70 rounded-full transition-all duration-300 ${top}`}></div>
+                <div className="absolute z-10 w-8 h-8 bg-primary/70 rounded-full transition-all duration-300" style={{ top: `${indicatorTop}px` }}></div>
             </div>
         </nav>
     );

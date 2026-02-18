@@ -5,10 +5,15 @@ import GithubIcon from "@/assets/icons/github.svg";
 import LinkedinIcon from "@/assets/icons/linkedin.svg";
 import MailIcon from "@/assets/icons/mail.svg";
 
-const links: { icon: StaticImageData; url: string; label: string; isMail: boolean }[] = [
+const links: {
+	icon: StaticImageData;
+	url: string;
+	label: string;
+	isMail: boolean;
+}[] = [
 	{
 		icon: ResumeIcon,
-		url: "/Wai_Yan_Min_Lwin_-_Software_Engineer.pdf",
+		url: "/waiyanminlwin.pdf",
 		label: "Resume",
 		isMail: false,
 	},
@@ -37,7 +42,11 @@ const SocialLinks = () => {
 		<ul className="flex justify-start items-center flex-wrap gap-3">
 			{links.map((link) => (
 				<li key={link.label}>
-					<a href={link.isMail ? `mailto:${link.url}` : link.url} target="_blank" rel="noreferrer">
+					<a
+						href={link.isMail ? `mailto:${link.url}` : link.url}
+						target="_blank"
+						rel="noreferrer"
+					>
 						<button className="c-btn">
 							<Image
 								priority

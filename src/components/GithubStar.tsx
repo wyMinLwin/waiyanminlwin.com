@@ -4,7 +4,13 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import StarIcon from "@/assets/icons/star.svg";
 
-const GithubStar = ({ repo }: { repo: string }) => {
+const GithubStar = ({
+	repo,
+	owner = "wyMinLwin",
+}: {
+	repo: string;
+	owner?: string;
+}) => {
 	const [stars, setStars] = useState<number>(0);
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -12,7 +18,7 @@ const GithubStar = ({ repo }: { repo: string }) => {
 		try {
 			setIsLoading(true);
 			const response = await fetch(
-				"https://api.github.com/repos/wyMinLwin/" + repo
+				`https://api.github.com/repos/${owner}/${repo}`,
 			);
 			const data = await response.json();
 			setStars(data.stargazers_count);
@@ -23,9 +29,9 @@ const GithubStar = ({ repo }: { repo: string }) => {
 		}
 	}
 
-    function goToGithub() {
-        window.open(`https://github.com/wyMinLwin/${repo}`, "_blank");
-    }
+	function goToGithub() {
+		window.open(`https://github.com/${owner}/${repo}`, "_blank");
+	}
 
 	useEffect(() => {
 		fetchStarCount();
@@ -33,7 +39,7 @@ const GithubStar = ({ repo }: { repo: string }) => {
 
 	return (
 		<button
-            onClick={() => goToGithub()}
+			onClick={() => goToGithub()}
 			className="px-2 mt-1 flex justify-center items-center space-x-1 hover:text-primary"
 		>
 			{isLoading ? "-" : <span className="text-lg">{stars}</span>}

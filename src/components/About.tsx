@@ -17,7 +17,7 @@ const About = () => {
 			</div>
 			<article className="text-base sm:text-lg tracking-wide space-y-2">
 				<p>
-					A passionate and proven <strong>Software Engineer</strong>{" "}
+					A passionate <strong>Software Engineer</strong>{" "}
 					specializing in building
 					<strong> efficient</strong>, <strong>scalable</strong>, and{" "}
 					<strong>impactful software solutions</strong>. My journey in tech is

@@ -2,7 +2,7 @@ import React from "react";
 
 const experiences = [
     {
-        title: "Software Developer",
+        title: "Developer",
         company: "Fusion Solution Co., Ltd.",
         description:
             "Developed user-centric platforms and AI-powered applications, including an insurance purchasing platform with Vue.js and Shadcn UI, an HR hiring platform and CV review application with React, and a feature-rich chatbot using Vue.js. Actively contributed to agile workflows, ensuring seamless feature delivery and collaborative sprint execution.",
@@ -11,8 +11,8 @@ const experiences = [
         stacks: ["Vue.js", "React", "ASP.Net Core", "Shadcn UI", "Azure"],
     },
     {
-        title: "Software Developer",
-        company: "Thetys",
+        title: "Junior Developer",
+        company: "Thetys Co., Ltd.",
         description:
             "Developed a Restaurant POS system and booking platform using Vue.js, Vuetify, Pinia, and ASP.Net Core Web API, ensuring robust functionality and seamless user experience. Collaborated in an agile environment with sprint-based development and weekly progress meetings for feedback and task alignment.",
         startDate: "May, 2023",
@@ -20,8 +20,8 @@ const experiences = [
         stacks: ["Vue.js", "ASP.Net Core", "Vuetify", "Azure"],
     },
     {
-        title: "Software Developer",
-        company: "Foreign Setup Company",
+        title: "Frontend Developer",
+        company: "Tech Startup",
         description:
             "Developed a video player platform for web and mobile using React and React Native, later re-engineering it with Next.js to enhance performance and maintainability. Collaborated with stakeholders to ensure technical solutions aligned with business objectives.",
         startDate: "Dec, 2022",
