@@ -85,7 +85,7 @@ const Contributions = () => {
 											}}
 										>
 											{pr.title}{" "}
-											<span className="text-mute/50">
+											<span className="text-stone-500">
 												#{pr.number}
 											</span>
 										</span>
