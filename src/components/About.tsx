@@ -17,26 +17,20 @@ const About = () => {
 			</div>
 			<article className="text-base sm:text-lg tracking-wide space-y-2">
 				<p>
-					A passionate <strong>Software Engineer</strong>{" "}
-					specializing in building
-					<strong> efficient</strong>, <strong>scalable</strong>, and{" "}
-					<strong>impactful software solutions</strong>. My journey in tech is
-					driven by a commitment to <strong>innovation</strong> and a love for
-					solving
-					<strong> complex problems</strong> with <strong>elegant code</strong>.
-					Over the years, I&apos;ve worked across <strong>startups</strong> and{" "}
-					<strong>established organizations</strong>. I&apos;ve consistently
-					delivered projects that blend <strong>functionality</strong> with
-					<strong> seamless user experiences</strong>.
+					A passionate Software Engineer specializing in building efficient,
+					scalable, and impactful software solutions. My journey in tech is
+					driven by a commitment to innovation and a love for solving complex
+					problems with elegant code. Over the years, I&apos;ve worked across
+					startups and established organizations. I&apos;ve consistently
+					delivered projects that blend functionality with seamless user
+					experiences.
 				</p>
 
 				<p>
 					When I&apos;m not immersed in development, you&apos;ll find me
-					<strong> strategizing</strong> over a game of <strong>chess</strong>,{" "}
-					<strong>diving</strong> into a good <strong>book</strong>, or
-					exploring new ideas in the <strong>gaming world</strong>. Let&apos;s
-					connect and turn
-					<strong> great ideas</strong> into <strong>reality</strong>!
+					strategizing over a game of chess, diving into a good book, or
+					exploring new ideas in the gaming world. Let&apos;s connect and turn
+					great ideas into reality!
 				</p>
 			</article>
 			<SocialLinks />
