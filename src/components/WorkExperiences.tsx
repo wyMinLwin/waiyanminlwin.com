@@ -40,7 +40,7 @@ const WorkExperiences = () => {
                 {experiences.map((experience, index) => (
                     <article
                         key={index}
-                        className="space-y-1 p-4 border-[1px] transition-all duration-200 border-mute/20 rounded-lg shadow-sm shadow-mute/10 bg-white hover:bg-[#fafaf9]"
+                        className="space-y-1 p-4 border-[1px] transition-all duration-200 border-mute/20 dark:border-stone-600/30 rounded-lg shadow-sm shadow-mute/10 dark:shadow-stone-900/20 bg-white dark:bg-stone-800 hover:bg-[#fafaf9] dark:hover:bg-stone-700/50"
                     >
                         <h3 className="text-lg sm:text-xl font-semibold space-x-1 tracking-wide">
                             <span>{experience.title}</span>
@@ -49,7 +49,7 @@ const WorkExperiences = () => {
                                 {experience.company}
                             </span>
                         </h3>
-                        <p className="text-black/70 text-sm sm:text-base">
+                        <p className="text-black/70 dark:text-stone-400 text-sm sm:text-base">
                             {experience.startDate} &mdash; {experience.endDate}
                         </p>
                         <p className="text-base sm:text-lg">

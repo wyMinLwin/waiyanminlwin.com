@@ -64,7 +64,7 @@ const Projects = () => {
 					return (
 						<article
 							key={index}
-							className={`group space-y-1 p-4 border-[1px] transition-all duration-200 border-mute/20 rounded-lg shadow-sm shadow-mute/10 bg-white ${project.redirectable ? "hover:bg-[#fafaf9]" : ""}`}
+							className={`group space-y-1 p-4 border-[1px] transition-all duration-200 border-mute/20 dark:border-stone-600/30 rounded-lg shadow-sm shadow-mute/10 dark:shadow-stone-900/20 bg-white dark:bg-stone-800 ${project.redirectable ? "hover:bg-[#fafaf9] dark:hover:bg-stone-700/50" : ""}`}
 						>
 							<Wrapper {...wrapperProps}>
 								<h3 className="text-lg sm:text-xl font-semibold space-x-1 tracking-wide flex items-center ">
@@ -76,7 +76,7 @@ const Projects = () => {
 											height={18}
 											src={ExternalLinkIcon}
 											alt="external-link"
-											className="group-hover:opacity-100 opacity-0 transition-all duration-300 w-[20px] h-[20px]"
+											className="group-hover:opacity-100 opacity-0 transition-all duration-300 w-[20px] h-[20px] dark:invert"
 										/>
 									)}
 								</h3>

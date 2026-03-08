@@ -1,4 +1,10 @@
+"use client";
+import { useTheme } from "./ThemeProvider";
+
 const BackgroundUI = () => {
+	const { theme } = useTheme();
+	const strokeColor = theme === "dark" ? "#3a3a3c9a" : "#dedfe09a";
+
 	return (
 		<>
 			<svg
@@ -11,7 +17,7 @@ const BackgroundUI = () => {
 					zIndex: 1,
 					height: "100vh",
 					width: "100vw",
-					stroke: "#dedfe09a",
+					stroke: strokeColor,
 					maskImage:
 						"linear-gradient(90deg, white, transparent 22%, transparent 78%, white)",
 				}}

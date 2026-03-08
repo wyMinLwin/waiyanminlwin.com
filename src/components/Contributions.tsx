@@ -26,6 +26,20 @@ const contributions = [
 			{ number: 435, title: "fix: v0 misconfiguration due to registry" },
 		],
 	},
+	{
+		owner: "oven-sh",
+		repo: "setup-bun",
+		description:
+			"Set up your GitHub Actions workflow with a specific version of Bun",
+		tags: ["GitHub Actions", "TypeScript"],
+		prs: [
+			{
+				number: 169,
+				title:
+					"fix: validate cached binary version matches requested version",
+			},
+		],
+	},
 ];
 
 const Contributions = () => {
@@ -38,7 +52,7 @@ const Contributions = () => {
 				{contributions.map((contribution, index) => (
 					<article
 						key={index}
-						className="group space-y-1 p-4 border-[1px] transition-all duration-200 border-mute/20 rounded-lg shadow-sm shadow-mute/10 bg-white hover:bg-[#fafaf9]"
+						className="group space-y-1 p-4 border-[1px] transition-all duration-200 border-mute/20 dark:border-stone-600/30 rounded-lg shadow-sm shadow-mute/10 dark:shadow-stone-900/20 bg-white dark:bg-stone-800 hover:bg-[#fafaf9] dark:hover:bg-stone-700/50"
 					>
 						<a
 							href={`https://github.com/${contribution.owner}/${contribution.repo}`}
@@ -55,7 +69,7 @@ const Contributions = () => {
 									height={18}
 									src={ExternalLinkIcon}
 									alt="external-link"
-									className="group-hover:opacity-100 opacity-0 transition-all duration-300 w-[20px] h-[20px]"
+									className="group-hover:opacity-100 opacity-0 transition-all duration-300 w-[20px] h-[20px] dark:invert"
 								/>
 							</h3>
 							<p className="text-base sm:text-lg">
@@ -85,7 +99,7 @@ const Contributions = () => {
 											}}
 										>
 											{pr.title}{" "}
-											<span className="text-stone-500">
+											<span className="text-stone-500 dark:text-stone-400">
 												#{pr.number}
 											</span>
 										</span>

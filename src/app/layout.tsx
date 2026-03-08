@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 import "./globals.css";
 import { Playfair_Display, Source_Sans_3 } from "next/font/google";
 import BackgroundUI from "../components/BackgroundUI";
+import ThemeProvider from "../components/ThemeProvider";
+import DarkModeToggle from "../components/DarkModeToggle";
 import { Metadata } from "next";
 
 const playfairDisplay = Playfair_Display({
@@ -65,13 +67,25 @@ export default function Layout({ children }: { children: ReactNode }) {
 		<html
 			lang="en"
 			className={`${playfairDisplay.variable} ${sourceSans3.variable}`}
+			suppressHydrationWarning
 		>
+			<head>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"||(t==null&&window.matchMedia("(prefers-color-scheme:dark)").matches)){document.documentElement.classList.add("dark")}}catch(e){}})()`,
+					}}
+				/>
+			</head>
 			<body>
-				<main className="relative z-10 container mx-auto px-7 sm:px-20 md:px-40 lg:px-60 xl:px-80 py-10 sm:py-16 md:py-28">
-					{children}
-				</main>
-				<BackgroundUI />
-				{/* <Navbar /> */}
+				<ThemeProvider>
+					<div className="sm:hidden absolute top-4 right-4 z-30 bg-white dark:bg-stone-800 rounded-full border-[1px] border-mute/20 dark:border-stone-600/30 shadow-sm shadow-mute/20 dark:shadow-stone-900/30 p-1.5">
+						<DarkModeToggle />
+					</div>
+					<main className="relative z-10 container mx-auto px-7 sm:px-20 md:px-40 lg:px-60 xl:px-80 py-10 sm:py-16 md:py-28">
+						{children}
+					</main>
+					<BackgroundUI />
+				</ThemeProvider>
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{

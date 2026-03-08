@@ -54,6 +54,7 @@ const SocialLinks = () => {
 								height={16}
 								src={link.icon}
 								alt={link.label + "-icon"}
+								className="dark:invert"
 							/>
 							<span>{link.label}</span>
 						</button>
