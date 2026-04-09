@@ -20,8 +20,9 @@ export default {
                 error: "#ff6b6b",
             },
             fontFamily: {
-                header: ['var(--playfairDisplay)'],
-                display: ['var(--sourceSans3)'],
+                header: ['var(--instrumentSans)'],
+                display: ['var(--instrumentSans)'],
+                mono: ['var(--chivoMono)'],
             },
         },
     },

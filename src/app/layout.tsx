@@ -1,18 +1,18 @@
 import { ReactNode } from "react";
 import "./globals.css";
-import { Playfair_Display, Source_Sans_3 } from "next/font/google";
+import { Instrument_Sans, Chivo_Mono } from "next/font/google";
 import BackgroundUI from "../components/BackgroundUI";
 import ThemeProvider from "../components/ThemeProvider";
 import DarkModeToggle from "../components/DarkModeToggle";
 import { Metadata } from "next";
 
-const playfairDisplay = Playfair_Display({
+const instrumentSans = Instrument_Sans({
 	subsets: ["latin"],
-	variable: "--playfairDisplay",
+	variable: "--instrumentSans",
 });
-const sourceSans3 = Source_Sans_3({
+const chivoMono = Chivo_Mono({
 	subsets: ["latin"],
-	variable: "--sourceSans3",
+	variable: "--chivoMono",
 });
 
 export const metadata: Metadata = {
@@ -66,7 +66,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 	return (
 		<html
 			lang="en"
-			className={`${playfairDisplay.variable} ${sourceSans3.variable}`}
+			className={`${instrumentSans.variable} ${chivoMono.variable}`}
 			suppressHydrationWarning
 		>
 			<head>
